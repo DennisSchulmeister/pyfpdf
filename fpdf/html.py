@@ -217,7 +217,7 @@ class HTML2FPDF(HTMLParser):
             self.font_stack.append((self.font_face, self.font_size, self.color))
             if 'color' in attrs:
                 color = hex2dec(attrs['color'])
-                self.set_text_color(*color)
+                self.set_text_color(color[0], color[1], color[2])
                 self.color = color
             if 'face' in attrs:
                 face = attrs.get('face').lower()
